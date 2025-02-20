@@ -14,7 +14,7 @@ func cellDrawer(cellStatus bool) string {
 
 func main() {
 	col := 3
-	row := 3
+	row := 5
 	iter := 5
 
 	cell := make([][]bool, col)

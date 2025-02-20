@@ -1,5 +1,7 @@
 package utils
 
-func PrintSlice([]int) {
+import "fmt"
 
+func PrintSlice([]int) {
+	fmt.Println("Test")
 }

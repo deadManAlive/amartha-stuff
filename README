@@ -1,0 +1,6 @@
+amartha stuff
+-------------
+
+- clone: `git clone --recurse-submodule https://github.com/deadManAlive/amartha-stuff`
+- utils module in `utils` as git submodule
+- exercise in `d3/exercise`

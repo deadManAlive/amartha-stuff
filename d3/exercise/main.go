@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic01"
-	"github.com/deadManAlive/amartha-stuff/utils"
+	utils "github.com/deadManAlive/amartha-utils"
 )
 
 func main() {

@@ -1,3 +1,6 @@
 [submodule "utils"]
 	path = utils
 	url = https://github.com/deadManAlive/amartha-utils
+[submodule "d8/go-restful-api"]
+	path = d8/go-restful-api
+	url = https://github.com/deadManAlive/amartha-go-restful-api.git

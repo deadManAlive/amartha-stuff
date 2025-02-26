@@ -4,7 +4,7 @@ import utils "github.com/deadManAlive/amartha-utils"
 
 var Functions = [...]func(int) [][]int{
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
 			for j := range n {
 				mat[i][j] = 2*j + 1
@@ -13,7 +13,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
 			for j := range n {
 				mat[i][j] = 2 * (j + 1)
@@ -22,7 +22,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
 			for j := range n {
 				mat[i][j] = 1 + (18 * i) + (2 * j)
@@ -31,7 +31,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -49,7 +49,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
 			for j := range n {
 				if i%2 == 0 {
@@ -62,7 +62,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		e := 1
 
@@ -88,7 +88,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -101,7 +101,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -114,7 +114,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -129,7 +129,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -142,7 +142,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -155,7 +155,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {
@@ -168,7 +168,7 @@ var Functions = [...]func(int) [][]int{
 		return mat
 	},
 	func(n int) [][]int {
-		mat := utils.SqEmpMatGen(n)
+		mat := utils.EmptySquareMatrixGenerator(n)
 
 		for i := range n {
 			for j := range n {

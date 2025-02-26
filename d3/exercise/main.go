@@ -5,6 +5,7 @@ import (
 
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic01"
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic02"
+	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic03"
 	utils "github.com/deadManAlive/amartha-utils"
 )
 
@@ -32,6 +33,15 @@ func main() {
 	s = 9
 
 	for i, f := range logic02.Functions {
+		r := f(s)
+		fmt.Printf("%2d:\n", i+1)
+		utils.PrintSlice2(r)
+	}
+
+	fmt.Println("Logic-03")
+	s = 9
+
+	for i, f := range logic03.Functions {
 		r := f(s)
 		fmt.Printf("%2d:\n", i+1)
 		utils.PrintSlice2(r)

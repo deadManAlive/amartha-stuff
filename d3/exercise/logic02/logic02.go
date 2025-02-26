@@ -87,4 +87,84 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i == j {
+					mat[i][j] = 2*i + 1
+				}
+			}
+		}
+
+		return mat
+	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i+j == n-1 {
+					mat[i][j] = (2*n - 1) - 2*i
+				}
+			}
+		}
+
+		return mat
+	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i+j == n-1 {
+					mat[i][j] = (2*n - 1) - 2*i
+				} else if i == j {
+					mat[i][j] = 2*i + 1
+				}
+			}
+		}
+
+		return mat
+	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i >= j {
+					mat[i][j] = 2*i + 1
+				}
+			}
+		}
+
+		return mat
+	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i <= j {
+					mat[i][j] = 2*i + 1
+				}
+			}
+		}
+
+		return mat
+	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i >= j && i+j <= n-1 || i <= j && i+j >= n-1 {
+					mat[i][j] = 2*j + 1
+				}
+			}
+		}
+
+		return mat
+	},
 }

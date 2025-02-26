@@ -167,4 +167,17 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	func(n int) [][]int {
+		mat := utils.SqEmpMatGen(n)
+
+		for i := range n {
+			for j := range n {
+				if i <= j && i+j <= n-1 || i >= j && i+j >= n-1 {
+					mat[i][j] = 2*j + 1
+				}
+			}
+		}
+
+		return mat
+	},
 }

@@ -316,6 +316,29 @@ var Functions = [...]func(int) [][]int{
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
+		a, b := 1, 1
+
+		for i := range n {
+			for j := range n {
+				if i%2 == 0 {
+					mat[j][i] = a
+				} else {
+					mat[n-1-j][i] = a
+				}
+				a, b = b, a+b
+			}
+		}
+
+		return mat
+	},
+	// 11b
+	func(n int) [][]int {
+		mat := utils.EmptySquareMatrixGenerator(n)
+
+		for i := range n {
+			mat[i] = append(mat[i], make([]int, (n-1)/2)...)
+		}
+
 		return mat
 	},
 }

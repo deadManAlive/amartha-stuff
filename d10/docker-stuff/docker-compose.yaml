@@ -1,0 +1,35 @@
+networks:
+  network-example:
+    name: network_example
+    driver: bridge
+
+volumes:
+  mongo-data1:
+    name: mongo-data1
+
+services:
+  nginx-example:
+    image: nginx:latest
+    container_name: nginx-example
+    ports:
+      - "8080:80/tcp"
+  mongodb-example:
+    container_name: mongodb-example
+    image: mongo:latest
+    ports:
+      - "27017:27017/tcp"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=toor
+      - MONGO_INITDB_DATABSE=admin
+    volumes:
+      - mongo-data1:/data/db
+    networks:
+      - network-example
+    depends_on:
+      - redis-example
+  redis-example:
+    image: redis:latest
+    container_name: redis-example
+    ports:
+      - "6379:6379/tcp"

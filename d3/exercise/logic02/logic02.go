@@ -3,6 +3,7 @@ package logic02
 import utils "github.com/deadManAlive/amartha-utils"
 
 var Functions = [...]func(int) [][]int{
+	// 1
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
@@ -12,6 +13,7 @@ var Functions = [...]func(int) [][]int{
 		}
 		return mat
 	},
+	// 2
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 		for i := range n {
@@ -21,46 +23,62 @@ var Functions = [...]func(int) [][]int{
 		}
 		return mat
 	},
+	// 3
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
+
+		s := 1
+
 		for i := range n {
 			for j := range n {
-				mat[i][j] = 1 + (18 * i) + (2 * j)
+				mat[i][j] = s
+				s += 2
 			}
 		}
 		return mat
 	},
+	// 4
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
+		s := 1
+
 		for i := range n {
 			for j := range n {
+				mat[i][j] = s
+
 				if i == 0 {
-					mat[i][j] = 1 + (3 * j)
+					s += 3
 				} else {
-					if j == 1 {
-						mat[i][j] = 8 + (20 * i) + (3 * j)
+					if j == 1 || j == n-1 {
+						s += 3
 					} else {
-						mat[i][j] = 9 + (20 * i) + (2 * j)
+						s += 2
 					}
 				}
 			}
 		}
 		return mat
 	},
+	// 5
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
+
+		s := 1
+
 		for i := range n {
 			for j := range n {
 				if i%2 == 0 {
-					mat[i][j] = 1 + (18 * i) + (2 * j)
+					mat[i][j] = s
 				} else {
-					mat[i][j] = (18 * (i + 1)) - 1 - (2 * j)
+					mat[i][n-1-j] = s
 				}
+				s += 2
 			}
 		}
 		return mat
 	},
+	// 6
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -87,6 +105,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 7
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -100,6 +119,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 8
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -113,6 +133,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 9
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -128,6 +149,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 10
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -141,6 +163,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 11
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -154,6 +177,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 12
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 
@@ -167,6 +191,7 @@ var Functions = [...]func(int) [][]int{
 
 		return mat
 	},
+	// 13
 	func(n int) [][]int {
 		mat := utils.EmptySquareMatrixGenerator(n)
 

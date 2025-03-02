@@ -339,6 +339,68 @@ var Functions = [...]func(int) [][]int{
 			mat[i] = append(mat[i], make([]int, (n-1)/2)...)
 		}
 
+		s := 1
+
+		for i := range n {
+			for j := range n {
+				if i <= (n-1)/2 {
+					if i%2 == 0 && i >= j && i+j <= n-1 {
+						mat[i][n-1-j] = s
+						mat[i][n-1+j] = s
+						mat[n-1-i][n-1-j] = s
+						mat[n-1-i][n-1+j] = s
+						s += 2
+					} else if i%2 == 1 && n-i-1 <= j && i+n-j-1 <= n-1 {
+						mat[i][n-1-(n-1-j)] = s
+						mat[i][n-1+(n-1-j)] = s
+						mat[n-1-i][n-1-(n-1-j)] = s
+						mat[n-1-i][n-1+(n-1-j)] = s
+						s += 2
+					}
+				}
+				if (i == j) && j < n/2 {
+					mat[i][j] = 2*(i+1) - 1
+					mat[n-1-i][j] = 2*(i+1) - 1
+				}
+			}
+		}
+
+		return mat
+	},
+	// 12b
+	func(n int) [][]int {
+		mat := utils.EmptySquareMatrixGenerator(n)
+
+		for i := range n {
+			mat[i] = append(mat[i], make([]int, (n-1)/2)...)
+		}
+
+		s := 1
+
+		for i := range n {
+			for j := range n {
+				if i <= (n-1)/2 {
+					if i%2 == 0 && i >= j && i+j <= n-1 {
+						mat[i][n/2+j] = s
+						mat[i][n/2-j] = s
+						mat[n-1-i][n/2+j] = s
+						mat[n-1-i][n/2-j] = s
+						s += 2
+					} else if i%2 == 1 && n-i-1 <= j && i+n-j-1 <= n-1 {
+						mat[i][n/2+n-j-1] = s
+						mat[i][n/2-(n-j-1)] = s
+						mat[n-1-i][n/2+n-j-1] = s
+						mat[n-1-i][n/2-(n-j-1)] = s
+						s += 2
+					}
+				}
+				if (i == j) && j > n/2 {
+					mat[i][n/2+j] = 2*((n-1-i)+1) - 1
+					mat[n-1-i][n/2+j] = 2*((n-1-i)+1) - 1
+				}
+			}
+		}
+
 		return mat
 	},
 }

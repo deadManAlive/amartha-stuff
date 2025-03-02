@@ -2,14 +2,18 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic01"
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic02"
 	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic03"
+	"github.com/deadManAlive/amartha-stuff/d3/exercise/logic04"
 	utils "github.com/deadManAlive/amartha-utils"
 )
 
 func main() {
+	start := time.Now()
+
 	fmt.Println("Logic-01")
 	s := 10
 	for i, f := range logic01.Functions {
@@ -46,4 +50,17 @@ func main() {
 		fmt.Printf("%2d:\n", i+1)
 		utils.PrintSlice2(r)
 	}
+
+	fmt.Println("Logic-04")
+	s = 4
+
+	for i, f := range logic04.Functions {
+		r := f(s)
+		fmt.Printf("%2d:\n", i+1)
+		utils.PrintSlice2(r)
+	}
+
+	elapsed := time.Since(start)
+
+	fmt.Printf("Execution time (plus printing): %d ms\n", elapsed.Milliseconds())
 }
